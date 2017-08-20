@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ImageUploadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ImageUploadEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_Image" EntityType="ImageUploadModel.tbl_Image" />
+  </EntityContainer>
+  <EntityType Name="tbl_Image">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="coordinateX" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CordinateY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Width" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="leftCropped" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="topCropped" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

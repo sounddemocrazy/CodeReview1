@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ImageUploadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_Image">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImageName" Type="varchar" MaxLength="50" />
+    <Property Name="Image" Type="image" />
+    <Property Name="coordinateX" Type="varchar" MaxLength="100" />
+    <Property Name="CordinateY" Type="varchar" MaxLength="100" />
+    <Property Name="Height" Type="varchar" MaxLength="100" />
+    <Property Name="Width" Type="varchar" MaxLength="100" />
+    <Property Name="leftCropped" Type="varchar" MaxLength="100" />
+    <Property Name="topCropped" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="ImageUploadModelStoreContainer">
+    <EntitySet Name="tbl_Image" EntityType="Self.tbl_Image" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
